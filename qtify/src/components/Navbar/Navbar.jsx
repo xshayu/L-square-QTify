@@ -15,7 +15,7 @@ function Navbar({ searchData }) {
         placeholder="Search a song of your choice"
         searchData={searchData}
       />
-      <Button text={"Give Feedback"} />
+      <Button text={"Give Feedback"} eventHandler={console.log('Button clicked.')} />
     </nav>
   );
 }
