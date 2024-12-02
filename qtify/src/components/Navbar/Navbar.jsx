@@ -6,6 +6,13 @@ import Search from "../Search/Search";
 import styles from "./navbar.module.css";
 
 function Navbar({ searchData }) {
+  const buttonEventHandler = {
+    event: 'onClick',
+    handler: (e) => {
+      console.log('Button clicked, horrah!');
+    }
+  };
+
   return (
     <nav className={styles.nav}>
       <Link to="/">
@@ -15,7 +22,7 @@ function Navbar({ searchData }) {
         placeholder="Search a song of your choice"
         searchData={searchData}
       />
-      <Button text={"Give Feedback"} eventHandler={console.log('Button clicked.')} />
+      <Button text={"Give Feedback"} eventHandler={buttonEventHandler} />
     </nav>
   );
 }
